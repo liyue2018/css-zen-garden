@@ -1,0 +1,783 @@
+
+/*reset*/
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var, b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    list-style: none;
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    font-weight: inherit;
+    font-style: inherit;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+html,body {
+    font-family: "ff-meta-web-pro",sans-serif;
+    font-size: 100%;
+    background: #f6efe5;
+    color: #0d2c40;
+    line-height:26px;
+}
+
+/*:focus {*/
+    /*outline: 1;*/
+/*}*/
+
+article,aside,canvas,details,figcaption,figure, footer,header,hgroup,menu,nav,section,summary {
+    display:block;
+}
+
+/*nav ul {*/
+    /*list-style:none;*/
+/*}*/
+
+/*blockquote, q {*/
+    /*quotes:none;*/
+/*}*/
+
+/*blockquote:before, blockquote:after,*/
+/*q:before, q:after {*/
+    /*content:'';*/
+    /*content:none;*/
+/*}*/
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    color: #0d2c40;
+    border-bottom: 1px solid #0d2c40;
+    text-decoration: none;
+    vertical-align:baseline;
+    background:transparent;
+    -webkit-transition: all .2s ease-out;
+    -moz-transition: all .2s ease-out;
+    -ms-transition: all .2s ease-out;
+    -o-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+}
+a:focus {outline: thin dotted;}
+a:active,a:hover {
+    outline: 0;
+    color: rgba(0,0,0,.4);
+    border-bottom: 1px solid rgba(0,0,0,.4);
+}
+h3 {
+    font-size: 150%;
+    font-weight: 700;
+}
+
+/*ins {*/
+    /*background-color:#ff9;*/
+    /*color:#000;*/
+    /*text-decoration:none;*/
+/*}*/
+
+/*mark {*/
+    /*background-color:#ff9;*/
+    /*color:#000;*/
+    /*font-style:italic;*/
+    /*font-weight:bold;*/
+/*}*/
+
+/*del {*/
+    /*text-decoration: line-through;*/
+/*}*/
+
+/*abbr[title], dfn[title] {*/
+    /*border-bottom:1px dotted #000;*/
+    /*cursor:help;*/
+/*}*/
+
+/*table {*/
+    /*border-collapse:collapse;*/
+    /*border-spacing:0;*/
+/*}*/
+
+/*hr {*/
+    /*display:block;*/
+    /*height:1px;*/
+    /*border:0;*/
+    /*border-top:1px solid #cccccc;*/
+    /*margin:1em 0;*/
+    /*padding:0;*/
+/*}*/
+
+/*input, select {*/
+    /*vertical-align:middle;*/
+/*}*/
+
+/*
+==========================================================================
+Page wrapper
+==========================================================================
+*/
+
+.page-wrapper {
+    position: relative;
+    max-width: 120em;
+    width:100%;
+    margin: 0 auto;
+    padding: 0;
+    /*overflow: hidden;*/
+}
+.intro header {
+    background: #c879b2;
+    width: 40%;
+    height: 50em;
+    overflow: hidden;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    float: left;
+}
+@media (max-width: 70em) {
+    .intro header {
+        width: 100%;
+        background: #f15a30;
+        height: 27em;
+    }
+}
+@media (max-width: 53em) {
+    .intro header {
+        height: 20em;
+    }
+}
+.intro header h1 {
+    position: absolute;
+    top:4.2em;
+    left: -3em;
+    padding: 1em;
+    color: #fff;
+    width: auto;
+    -ms-transform:rotate(-90deg); 	/* IE 9 */
+    -moz-transform:rotate(-90deg); 	/* Firefox */
+    -webkit-transform:rotate(-90deg); /* Safari 和 Chrome */
+    -o-transform:rotate(-90deg); 	/* Opera */
+    transform:rotate(-90deg);
+
+}
+.intro header h2 {
+    width: 50%;
+    height: 21em;
+    float: right;
+    background: #0d2c40 url("icon-star.svg") no-repeat left bottom;
+    padding: 6em 0.5em 0 0.5em;
+    font-size: 240%;
+    background-size: 101%;
+    color: #fff;
+    line-height: 1.25em;
+    font-weight: 700;
+}
+@media (max-width: 70em) {
+    .intro header h2 {
+        background: #0d2c40 url(icon-star.svg) no-repeat left bottom;
+        width: 66.666%;
+        background-size: 49%;
+        height: 10em;
+        font-size: 200%;
+        padding: 1em 0.5em 0 0.5em;
+    }
+}
+.intro .summary {
+    width: 60%;
+    height: 50em;
+    float: left;
+    background: #c879b2 url("icons-3-pack.svg") no-repeat left bottom;
+    background-size: 101%;
+    color: #fff;
+    padding: 16.3em 2em 10em 2em;
+}
+
+@media (max-width: 70em) {
+    .intro .summary {
+        width: 100%;
+        height: auto;
+        padding: 2em 1em 37% 1em;
+    }
+
+}
+.intro .summary p {
+    padding: 0 40% 2em 0;
+}
+
+@media (max-width: 70em) {
+    .intro .summary p {
+        padding:0 0 1em 35%;
+    }
+}
+@media (max-width: 53em) {
+    .intro .summary p {
+        padding:0 0 1em 0;
+    }
+}
+.intro .summary p a {
+    color: inherit;
+    border-bottom-color: #fff;
+}
+.intro .summary a:hover {
+    color: rgba(0,0,0,.4);
+    border-bottom-color: rgba(0,0,0,.4);
+}
+.preamble {
+    position: relative;
+    clear: both;
+    width: 60%;
+    padding: 8em 0.5em 32em 0;
+    margin-left: 20%;
+}
+
+@media (max-width: 70em) {
+    .preamble {
+        width: 100%;
+        margin: 0;
+        padding: 2em 1em 28em 1em;
+    }
+}
+@media (max-width: 53em) {
+    .preamble {
+        padding-bottom: 22em;
+    }
+}
+.preamble h3 {
+    font-size: 150%;
+    margin-right: 35%;
+    font-weight: 600;
+}
+@media (max-width: 53em) {
+    .preamble h3 {
+        margin-right: 0;
+    }
+}
+.preamble p {
+    margin-top:20px;
+    margin-right: 36%;
+}
+@media (max-width: 53em) {
+    .preamble p{
+        margin-right: 0;
+    }
+}
+.preamble p:last-child {
+    position: absolute;
+    right: 0;
+    top:-20px;
+    margin-right: -5px;
+    background: rgba(0, 188, 217, 0.8);
+    color: #fff;
+    width: 33.65%;
+    padding: 8em 1em 23em 1em;
+    z-index: 2;
+}
+
+@media (max-width: 70em) {
+    .preamble p:last-child {
+        background: rgba(239, 54, 5, 0.8);
+        width: 33.1%;
+        padding: 6em 1em 10em 1em;
+    }
+}
+@media (max-width: 53em) {
+    .preamble p:last-child {
+        background: transparent;
+        width: 100%;
+        color: #0d2c40;
+        position: relative;
+        top:0;
+        padding: 0;
+    }
+}
+.main {
+    clear: both;
+    background: url("mid-century-1.jpg") no-repeat center center;
+    background-size: cover;
+    padding: 20em 0;
+    margin-top: -25em;
+    position: relative;
+}
+@media (max-width: 53em) {
+    .main {
+        background: #f6efe5;
+        padding: 0;
+        margin-top:-20em;
+    }
+}
+/*@media (max-width: 70em) {*/
+    /*.main {*/
+        /*top:-25em;*/
+    /*}*/
+/*}*/
+.main .explanation {
+    width: 40%;
+    background: #0d2c40 url("icon-half.svg") no-repeat right center;
+    background-size: 40%;
+    color: #fff;
+    padding: 3em 1em;
+    position: relative;
+}
+@media (max-width: 70em) {
+    .main .explanation {
+        width: 66.666%;
+        margin: 0;
+    }
+}
+@media (max-width: 53em) {
+    .main .explanation {
+        width: 100%;
+        background: #0d2c40;
+        padding: 1em;
+        margin: 0;
+    }
+}
+.main .explanation h3 {
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    position: absolute;
+    font-size: 150%;
+    font-weight: 600;
+    top:8em;
+    left: -4em;
+}
+@media (max-width: 53em) {
+    .main .explanation h3 {
+        font-size: 150%;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+        position: relative;
+        left: 0;
+        top: 0;
+        margin: 1em 0;
+    }
+}
+.main .explanation p {
+    padding-left: 15%;
+    margin-bottom: 1em;
+    margin-right: 7em;
+}
+@media (max-width: 53em) {
+    .main .explanation p {
+        width: 100%;
+        padding-left: 0;
+    }
+}
+.main .participation {
+    position: absolute;
+    right: 40%;
+    margin-top:14em;
+    padding: 1em;
+    z-index: 2;
+    background: #f6efe5;
+    width: 40%;
+}
+@media (max-width: 70em) {
+    .main .participation {
+        width: 66.866%;
+        right: 33.2%;
+        margin-top:20em;
+    }
+}
+@media (max-width: 53em) {
+    .main .participation {
+        width: 100%;
+        position: relative;
+        right: 0;
+        margin-top:0;
+    }
+}
+.main .participation p {
+    margin: 10px 0;
+}
+.main .participation h3 {
+    margin: 1em 0;
+    font-size: 150%;
+    font-weight: 600;
+}
+.main .benefits {
+    background: rgba(0, 188, 217, 0.8) url(icon-circles.svg) no-repeat left top;
+    background-size: 100%;
+    position: absolute;
+    right: 20%;
+    width: 20%;
+    padding: 22em 1em 25em 1em;
+    margin-top: 3em;
+    text-align: left;
+    font-size: 90%;
+    z-index: 2;
+}
+@media (max-width: 70em) {
+    .main .benefits {
+        width: 33.25%;
+        right: 0;
+        margin-top: 12em;
+        padding: 21em 1em 24em 1em;
+
+    }
+}
+@media (max-width: 53em) {
+    .main .benefits {
+        background: rgba(0, 188, 217, 0.8) url(icon-circles.svg) no-repeat center top;
+        background-size: 33%;
+        width: 100%;
+        position: relative;
+        right: 0;
+        margin-top: 0;
+        padding: 7em 1em 1em 1em;
+
+    }
+}
+.main .benefits h3 {
+    font-size: 150%;
+    font-weight: 600;
+    margin: 30px 0;
+}
+.main .requirements:before {
+    content: " ";
+    background: url('mid-century-2.jpg') no-repeat left center;
+    background-size: cover;
+    z-index: 2;
+    width: 60%;
+    height: 40em;
+    position: absolute;
+    left: -60%;
+    top:0;
+    margin-top: 0;
+    /*padding: 1em;*/
+}
+@media (max-width: 70em) {
+    .main .requirements:before {
+        width: 66.666%;
+        left: -66.666%;
+        height: 45em;
+    }
+}
+.main .requirements {
+    position: absolute;
+    right: 0;
+    width: 60%;
+    margin-top: 60em;
+    z-index: 2;
+    font-size: 95%;
+}
+
+@media (max-width: 70em) {
+    .main .requirements {
+        width: 75%;
+        margin-top: 65em;
+    }
+}
+@media (max-width: 53em) {
+    .main .requirements {
+        width: 100%;
+        margin: 0;
+        position: relative;
+        top:1em;
+        padding: 1em;
+    }
+}
+
+.main .requirements h3 {
+    font-size: 300%;
+    position: absolute;
+    top:0.7em;
+    left: -6em;
+    z-index: 3;
+    padding-top: 2em;
+    font-weight: 700;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+@media (max-width: 53em) {
+    .main .requirements h3 {
+        position: relative;
+        left: 0em;
+        top:-0.5em;
+        padding: 0;
+        font-size: 150%;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+}
+.main .requirements p {
+    margin: 0 3em 1em 1em;
+    width:40%;
+    float: left;
+}
+@media (max-width: 70em) {
+    .main .requirements p {
+        clear: left;
+        width: 100%;
+    }
+}
+@media (max-width: 53em) {
+    .main .requirements p {
+        margin: 0 0 1em 0;
+    }
+}
+footer {
+    position: absolute;
+    left: 1em;
+    bottom:1em;
+    width: 20%;
+}
+@media (max-width: 53em) {
+    footer {
+        position: relative;
+        bottom: 0;
+        top:1em;
+        left: 0;
+        width: 100%;
+        padding-left: 0.5em;
+    }
+}
+footer a {
+    border-bottom-width: 0;
+    display: block;
+    margin: 0 0.25em;
+    font-size: 90%;
+}
+
+@media (max-width: 53em) {
+    footer a {
+        display: inline-block;
+    }
+}
+footer a:hover {
+    border-bottom-width: 0;
+}
+.sidebar {
+    clear: both;
+    margin-top: 75em;
+    padding-top: 20em;
+    background: #c879b2;
+    overflow: hidden;
+}
+@media (max-width: 70em) {
+    .sidebar {
+        margin-top:84.5em;
+    }
+}
+@media (max-width: 53em) {
+    .sidebar {
+        margin-top:2em;
+        padding-top:2em;
+    }
+}
+.sidebar .design-selection h3 {
+    color: #fff;
+    font-size: 150%;
+    font-weight: 700;
+    width: 20%;
+    float: left;
+    padding: 5em 1em;
+}
+
+@media (max-width: 70em) {
+    .sidebar .design-selection h3 {
+        width: 100%;
+        text-align: right;
+        padding: 0 1em;
+        margin-bottom: 1em;
+    }
+}@media (max-width: 53em) {
+    .sidebar .design-selection h3 {
+        text-align: left;
+    }
+}
+.sidebar .design-selection ul li {
+    width: 20%;
+    float: left;
+    color: #fff;
+    font-weight: 200;
+    display: inline-block;
+    padding: 10em 1em 2em 1em;
+}
+
+@media (max-width: 70em) {
+    .sidebar .design-selection ul li {
+        width: 25%;
+    }
+}
+.sidebar .design-selection ul li:before {
+    font-size: 700;
+}
+@media (max-width: 53em) {
+    .sidebar .design-selection ul li:before {
+        font-size: 300%;
+        display: block;
+        padding-bottom: 0.25em;
+    }
+}
+@media (max-width: 53em) {
+    .sidebar .design-selection ul li {
+        width: 100%;
+        padding: 5em 1em 2em 1em;
+    }
+}
+.sidebar .design-selection ul li a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 0 solid transparent;
+}
+@media (max-width: 53em) {
+    .sidebar .design-selection ul li a {
+        display: inline;
+    }
+}
+.sidebar .design-selection ul li:nth-child(1):before {
+    content: '1';
+}
+.sidebar .design-selection ul li:nth-child(1) {
+    background: #0d2c40;
+    padding: 40em 1em 2em 1em;
+    margin-top: -30em;
+}
+@media (max-width: 53em) {
+    .sidebar .design-selection ul li:nth-child(1) {
+        margin-top:0;
+        padding: 5em 1em 2em 1em;
+    }
+}
+.sidebar .design-selection ul li:nth-child(2):before {
+    content: '2';
+}
+.sidebar .design-selection ul li:nth-child(2) {
+    background: #f15a30;
+}
+.sidebar .design-selection ul li:nth-child(3):before {
+    content: '3';
+}
+.sidebar .design-selection ul li:nth-child(3) {
+    background: #31c5da;
+}
+.sidebar .design-selection ul li:nth-child(4):before {
+    content: '4';
+}
+.sidebar .design-selection ul li:nth-child(4) {
+    background: #f15a30;
+}
+.sidebar .design-selection ul li:nth-child(5):before {
+    content: '5';
+}
+.sidebar .design-selection ul li:nth-child(5) {
+    background: #0d2c40;
+    margin-left: 20%;
+}
+
+@media (max-width: 70em) {
+    .sidebar .design-selection ul li:nth-child(5) {
+        margin-left:0;
+    }
+}
+.sidebar .design-selection ul li:nth-child(6):before {
+    content: '6';
+}
+.sidebar .design-selection ul li:nth-child(6) {
+    background: #f15a30;
+}
+.sidebar .design-selection ul li:nth-child(7):before {
+    content: '7';
+}
+.sidebar .design-selection ul li:nth-child(7) {
+    background: #31c5da;
+}
+.sidebar .design-selection ul li:nth-child(8):before {
+    content: '8';
+}
+.sidebar .design-selection ul li:nth-child(8) {
+    background: #f15a30;
+}
+.design-archives,.zen-resources {
+    clear: left;
+    position: relative;
+    background: #31c5da;
+    width: 20%;
+    margin-left: 60%;
+    margin-right: 20%;
+    padding: 10em 1em 3em 1em;
+}
+@media (max-width: 70em) {
+    .design-archives,.zen-resources {
+        width: 25%;
+        margin-left: 50%;
+    }
+}
+@media (max-width: 53em) {
+    .design-archives {
+        background-color: #31c5da;
+        width: 100%;
+        margin:0;
+        padding: 4em 1em 1em 1em;
+    }
+}
+.design-archives h3,.zen-resources h3 {
+    position: absolute;
+    color: #fff;
+    top:8.5em;
+    left: -4em;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+
+}
+@media (max-width: 53em) {
+    .design-archives h3,.zen-resources h3 {
+        position: relative;
+        left: 0;
+        top:0;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+        margin-bottom: 1em;
+    }
+}
+.zen-resources {
+    background: #31c5da url("icon-circles.svg") no-repeat left bottom;
+    background-size: 100%;
+    padding: 8em 1em 22em 1em;
+}
+
+@media (max-width: 53em) {
+    .zen-resources {
+        width: 100%;
+        margin: 0;
+        background:#31c5da url("icon-circles.svg") no-repeat center bottom;
+        background-size: 35%;
+        padding: 2em 1em 10em 1em;
+    }
+}

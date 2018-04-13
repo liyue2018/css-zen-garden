@@ -1,0 +1,508 @@
+/*reset*/
+
+html,body,div,p,a,span,img,ul,li,h1,h2,h3,header,footer,aside,section {
+    margin: 0;
+    padding:0;
+    border:0;
+    list-style: none;
+}
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html{
+    width: 100%;
+    font-size: 62.5%; /*for rem*/
+}
+body {
+    width: 100%;
+    font-family: Helvetica,Arial,sans-serif;
+    color: #333;
+    background: #e8ecf0 url("denim2.png") no-repeat 50% 350px;
+}
+
+/* block level */
+
+
+
+/*inline*/
+
+a {
+    color: #a28351;
+    text-decoration: none;
+    -webkit-transition: all 0.25s linear;
+    -moz-transition: all 0.25s linear;
+    -o-transition: all 0.25s linear;
+    transition: all 0.25s linear;
+}
+a:hover,a:focus {
+    color: #000;
+    border-bottom: 2px solid #a28351;
+    -webkit-transition: all 0.25s linear;
+    -moz-transition: all 0.25s linear;
+    -o-transition: all 0.25s linear;
+    transition: all 0.25s linear;
+
+}
+.clearfix {
+    *zoom: 1;
+}
+.clearfix:after {
+    content: ".";
+    height: 0;
+    visibility: hidden;
+    clear: both;
+    display: block;
+}
+
+/*-------------------------------------------
+	Modules
+-------------------------------------------*/
+
+.page-wrapper {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/*-------------------------------------------
+	Banner
+-------------------------------------------*/
+[role="banner"] h1 {
+    color: #182e4f;
+    font-size: 3.5rem;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    padding: 1em 0 0;
+    text-transform: uppercase;
+    visibility: hidden;
+}
+[role="banner"] h1:before {
+    content: "CSS Zen Garments";
+    visibility: visible;
+    display: block;
+}
+[role="banner"] h1:after {
+    content: "Made Locally";
+    display: block;
+    color: rgba(24, 46, 79, 0.4);
+    font-size: 1.4rem;
+    visibility: visible;
+    letter-spacing: 0.5em;
+    /*margin: 0.5em 0 3em;*/
+}
+[role="banner"] h2 {
+    color: rgba(41, 78, 134, 0.5);
+    font-weight: 400;
+    text-transform: uppercase;
+    visibility: hidden;
+    display: none;
+}
+[role="banner"] h2:after {
+    content: "Impeccable Quality";
+    display: block;
+    visibility: visible;
+}
+[role="article"] {
+    padding: 0 30% 10em 10%;
+    text-align: right;
+}
+
+/*-------------------------------------------
+    summary
+-------------------------------------------*/
+
+.summary p {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    line-height: 1.6;
+    letter-spacing: 0.1em;
+    /*margin-bottom: 3.5em;*/
+
+}
+
+/*-------------------------------------------    
+    Preamble
+-------------------------------------------*/
+
+.preamble {
+    background: url("sep.png") no-repeat 50% 0;
+}
+.preamble p,.main p {
+    font-size: 2rem;
+    margin-bottom: 2em;
+    font-weight: lighter;
+}
+.main h3,.preamble h3,.select {
+    visibility: hidden;
+    color: #263358;
+    font-size: 2rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+/*-------------------------------------------
+	Explanation
+-------------------------------------------*/
+.explanation h3:after { content: "See Yourself in a Different Way";  }
+
+/*-------------------------------------------
+	Participation
+-------------------------------------------*/
+.participation h3:after { content: "Get Into a Brand New Pair";  }
+
+
+/*-------------------------------------------
+	Benefits
+-------------------------------------------*/
+.benefits h3:after { content: "Look Great\2026  and Feel Great Too!";  }
+
+
+/*-------------------------------------------
+	Requirements
+-------------------------------------------*/
+
+.requirements h3:after { content: "“One Size Fits” All Be Damned!"; text-indent: -0.5em; }
+
+/*-------------------------------------------
+	footer
+-------------------------------------------*/
+
+footer {
+    font-size: 1.3rem;
+}
+footer a {
+    margin: 0 0.25em;
+}
+
+/*-------------------------------------------
+	aside
+-------------------------------------------*/
+.select:after {
+    display: block;
+    content: "Washes & Styles";
+    color: #182e4f;
+    width: 7em;
+    margin: 0 auto 2em;
+    background: transparent url("waves.png") no-repeat 50% 0;
+    padding: 2em 0 0;
+    font-size: 1.8rem;
+    text-align: center;
+}
+.design-selection ul {
+    width: 94%;
+    margin: 0 auto;
+}
+.design-selection li {
+    float: left;
+    width: 23%;
+    padding-right: 2%;
+    color: #aaa;
+    font-size: 1.2rem;
+    margin: 0 0 1em;
+}
+.design-name {
+    display: block;
+    font-size: 1.4rem;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0 0 0.24em;
+}
+.designer-name {
+    color: #7989a3;
+}
+
+/*-------------------------------------------
+	Design Selection
+-------------------------------------------*/
+
+.design-archives ul {
+    width: 100%;
+    text-align: center;
+}
+.design-archives li {
+    display: inline-block;
+    margin-right: 3em;
+}
+.design-archives li a {
+    display: block;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+
+}
+.next a {
+    width: 43px;
+    height: 37px;
+    background: transparent url("czg.svg") no-repeat 10px -56px;
+
+}
+.next a:hover,.next a:focus {
+    background-position: 10px -138px;
+}
+.viewall a {
+    width: 39px;
+    height: 39px;
+    background: transparent url("czg.svg") no-repeat -56px -55px;
+}
+.viewall a:hover,.viewall a:focus {
+    background-position: -56px -137px;
+}
+.zen-resources {
+    float: left;
+    position: relative;
+    left: 50%;
+}
+.zen-resources ul {
+    width: 100%;
+    margin: 2em auto 4em;
+    position: relative;
+    left: -50%;
+}
+
+.zen-resources ul li {
+    float: left;
+    margin: 0 0 1em 3em;
+
+}
+.zen-resources a {
+    display: inline-block;
+    float: left;
+    width: 60px;
+    height: 60px;
+    text-indent: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    background: transparent url("czg.svg") no-repeat 0 0;
+}
+.view-css a {
+    background-position: -502px 12px;
+}
+.view-css a:hover,.view-css a:focus {
+    background-position: -502px -78px;
+    -webkit-transition-property: none;
+    transition-property: none;
+}
+.archives,.resources {
+    position: absolute;
+    left: -9999px;
+}
+
+/*-------------------------------------------
+	Animations
+-------------------------------------------*/
+@-webkit-keyframes FADEY {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+.intro {
+    -webkit-animation-name: FADEY;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: 1;
+}
+[role="article"] {
+    -webkit-animation-name: FADEY;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: 1;
+}
+
+@media screen and (min-width: 700px) {
+    body {
+        background-attachment: fixed;
+        background-position: 90% 10%;
+    }
+    .intro:before {
+        content: "";
+        display: block;
+        width: 105px;
+        height: 30px;
+        background: transparent url("czg.svg") no-repeat;
+        background-position: -184px -99px;
+        position: fixed;
+        left: 3%;
+        top:154px;
+    }
+    [role="article"], [role="banner"], footer { padding: 0 30% 10em 10%; text-align: right; position: relative; }
+
+    [role="banner"] {
+        padding-top: 200px;
+        padding-bottom: 3em;
+    }
+    [role="banner"] h1 {
+        font-size: 4.6rem;
+        letter-spacing: 0;
+        line-height: 0.8em;
+    }
+    [role="banner"] h1:after {
+        position: absolute;
+        top:14.7em;
+        left: 50%;
+    }
+    [role="banner"] h2,[role="article"] h3{
+        width: 10em;
+        position: absolute;
+        left: 75%;
+        top: 3em;
+        display: block;
+        font-size: 1.5rem;
+        letter-spacing: 0;
+        line-height: 1;
+        text-align: left;
+        text-transform: uppercase;
+    }
+    [role="banner"] h2{
+        top:11em;
+        font-size: 1.9rem;
+    }
+    [role="banner"] h2:before {
+        display: block;
+        visibility: visible;
+        width: 100%;
+        height: 2em;
+        content: "Est. 2003";
+        color: rgba(0, 0, 0, 0.15);
+        font-weight: 900;
+        font-size: 50rem;
+        -webkit-transform: rotate(-90deg);
+        -moz-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        -o-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+        margin: auto;
+        position: fixed;
+        top:0.2em;
+        left: -0.2em;
+        bottom: 0;
+        line-height: 1;
+        -webkit-mask-image: url("denim-mask2.png");
+        mask-image: url("denim-mask2.png");
+    }
+
+    .summary p:nth-child(2) {
+        background: yellow;
+        font-size: 1.4rem;
+        margin-top: 4em;
+        visibility: hidden;
+        position: relative;
+    }
+
+    .summary p:nth-child(2):before {
+        visibility: visible;
+        content: ' ';
+        display: block;
+        width: 6em;
+        height: 30px;
+        position: absolute;
+        right: 21em;
+        top:-0.5em;
+        background: transparent url("czg.svg") no-repeat -159px -1px;
+    }
+    .summary p:nth-child(2):after {
+        visibility: visible;
+        content: ' ';
+        display: block;
+        width: 6em;
+        height: 30px;
+        position: absolute;
+        right: 14em;
+        top:-0.25em;
+        background: transparent url("czg.svg") no-repeat -277px 0px;
+    }
+    .summary p:nth-child(2) a {
+        display: inline-block;
+        visibility: visible;
+        position: absolute;
+        right: 7em;
+        top:0;
+        width: 6em;
+        height: 25px;
+        background: transparent url("czg.svg") no-repeat -376px -93px;
+        text-indent: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .summary p:nth-child(2) a[href*="css"] {
+        background-position: -472px -94px;
+        right: 0;
+    }
+    .summary p:nth-child(2) a:hover {
+        text-indent: 0;
+        border-bottom: 2px solid #a28351;
+        background-image: none;
+        transition: all 0.25s linear;
+        -moz-transition: all 0.25s linear;
+        -webkit-transition: all 0.25s linear;
+        -o-transition: all 0.25s linear;
+    }
+    .preamble {
+        padding-top:9em;
+    }
+
+    .preamble h3:after,.main h3:after,.select:after {
+        display: block;
+        visibility: visible;
+    }
+    .preamble h3:after {
+        content: "A Fashion-Forward Future";
+
+    }
+    .main h3 {
+        position: absolute;
+        top:-3em;
+    }
+    .requirements {
+        padding-bottom: 5em;
+    }
+    footer {
+        padding-bottom: 5em;
+    }
+    .design-selection li {
+        margin-bottom: 3em;
+    }
+    .design-archives {
+        clear: left;
+    }
+
+    .next {
+        margin-right: 2em;
+        margin-left: -0.4em;
+    }
+
+}
+
+@media screen and (min-width: 1130px) {
+    .design-archives {
+        position: absolute;
+        left: 5%;
+        top: 95em;
+    }
+    [role="article"], [role="banner"] {
+        padding-left: 25%;
+    }
+    .design-selection {
+        position: absolute;
+        left: 5%;
+        top: 31em;
+        width: 20%;
+    }
+    .select:after {
+        text-align: left;
+        background-position: 0 bottom;
+        padding: 0 0 2em;
+        margin: 0 0 2em;
+    }
+    .design-selection ul {
+        width: 100%;
+    }
+    .design-selection  li {
+        width: 100%;
+        padding:0;
+        margin-bottom: 2em;
+    }
+    .design-selection li a:hover,.design-selection li a:focus {
+        border-bottom-width: 0;
+    }
+}
